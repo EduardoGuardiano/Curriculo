@@ -1,0 +1,157 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #e9edf2;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* Container principal */
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #e9edf2;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #142d4e, #245b85);
+    color: white;
+    padding: 40px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 8px;
+}
+
+#titulo {
+    font-size: 18px;
+    color: #c9e4ff;
+}
+
+#contato {
+    font-size: 14px;
+    color: #e1eaf3;
+}
+
+/* Seções */
+section {
+    background-color: white;
+    padding: 30px 40px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+section h2 {
+    color: #1d456b;
+    font-size: 21px;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3b82b8;
+}
+
+/* Resumo profissional */
+#resumo {
+    font-size: 15px;
+    color: #555;
+    text-align: justify;
+}
+
+/* Habilidades */
+#lista-habilidades {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#lista-habilidades li {
+    background-color: #e8f2fa;
+    color: #245b85;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    border-left: 3px solid #3b82b8;
+}
+
+/* Projetos */
+#lista-projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#lista-projetos > div {
+    background-color: #f5f8fb;
+    padding: 18px;
+    border-left: 4px solid #245b85;
+    border-radius: 6px;
+}
+
+#lista-projetos h3 {
+    color: #1d456b;
+    margin-bottom: 6px;
+}
+
+#lista-projetos p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    header {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    section {
+        padding: 25px 20px;
+    }
+
+    #lista-habilidades {
+        flex-direction: column;
+    }
+}
+
+/* Impressão */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    header {
+        border-radius: 0;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    section {
+        break-inside: avoid;
+    }
+}

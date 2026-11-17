@@ -48,7 +48,7 @@ const dadosCurriculo = {
         { "nome": "HTML5", "nível": "Intermediário" },
         { "nome": "CSS3", "nível": "Intermediário" },
         { "nome": "JavaScript", "nível": "Básico/Intermediário" },
-        { "nome": "Java", "nível": "Básico/Intermediário" },
+        { "nome": "Python", "nível": "Básico/Intermediário" },
         { "nome": "SQL", "nível": "Básico/Intermediário" }
       ],
       "comportamentais": [
@@ -76,7 +76,7 @@ const dadosCurriculo = {
         "descrição": "Projeto acadêmico desenvolvido durante o curso de Análise e Desenvolvimento de Sistemas.",
         "função": "Desenvolvedor",
         "tecnologias": ["JavaScript", "HTML", "CSS"],
-        "url": "https://github.com/Projeto_ADS",
+        "url": "https://github.com/EduardoGuardiano/Projeto_ADS.git",
         "data de início": "",
         "data de término": ""
       },
@@ -86,15 +86,6 @@ const dadosCurriculo = {
         "função": "Desenvolvedor",
         "tecnologias": ["HTML", "CSS", "JavaScript"],
         "url": "https://github.com/calculadora",
-        "data de início": "",
-        "data de término": ""
-      },
-      {
-        "nome": "Jogo de Adivinhação",
-        "descrição": "Jogo interativo desenvolvido para praticar estruturas condicionais e lógica de programação.",
-        "função": "Desenvolvedor",
-        "tecnologias": ["HTML", "JavaScript"],
-        "url": "https://github.com/Jogo_advinha-o",
         "data de início": "",
         "data de término": ""
       }
@@ -127,20 +118,15 @@ const dadosCurriculo = {
     }
   }
 };
-// 1. Mantenha aqui em cima o seu objeto const dadosCurriculo = { ... };
-
-// 2. Função para preencher o HTML
 function carregarCurriculo() {
   const cv = dadosCurriculo.cv;
   const info = cv.personalInformation;
 
-  // Preenchendo textos simples
   document.getElementById("nome").textContent = info.fullName;
   document.getElementById("titulo").textContent = info.professionalTitle;
   document.getElementById("contato").textContent = `${info.email} | ${info.phone} | ${info.location.city} - ${info.location.state}`;
   document.getElementById("resumo").textContent = cv.professionalSummary.description;
 
-  // Preenchendo a lista de habilidades (usando loop forEach)
   const ulHabilidades = document.getElementById("lista-habilidades");
   cv.habilidades.técnicas.forEach((hab) => {
     const li = document.createElement("li");
@@ -148,7 +134,6 @@ function carregarCurriculo() {
     ulHabilidades.appendChild(li);
   });
 
-  // Preenchendo os projetos (criando elementos HTML dinâmicos)
   const divProjetos = document.getElementById("lista-projetos");
   cv.projetos.forEach((projeto) => {
     const card = document.createElement("div");
